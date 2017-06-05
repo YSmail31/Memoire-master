@@ -1,0 +1,81 @@
+\part*{Introduction Generale}
+La gestion des ressources d'une ville de manière automatique est
+devenue le sujet du jour à cause de la croissance exponentiel des
+habitants de villes dans le monde. Récemment, les chercheurs, de
+différents domaines, sont intéressés à ce problème et continue de
+proposer différentes manières pour aborder le sujet. De point de vue
+informatique, les chercheurs ont commencé par le stockage et le
+traitement de données via le cloud, la collecte des données par les
+réseaux de capteurs sans fil (WSN) et Internet des objets (IoT),
+$\cdots$. Aux contraires des approches proposées auparavant, les
+systèmes de cyber physiques viennent comme une alternative qui essaye
+de résoudre le problème dans sa globalité et propose de le gérer d'une
+façon modulaire pour construire ce que l'on appelle ``La ville
+intelligente''.
+
+Les systèmes de cyber-physique sont des systèmes informatiques
+(systèmes de cont\^ole) qui contrôlent des entités physiques tels que
+des capteurs, des actionneurs, $\cdots$. La plupart des systèmes de
+contr\^oles sont des systèmes qui interagissent aux stimuli et aux
+changements dans l'environnement. Ainsi les mesures physiques, faites
+via les capteurs, ont besoin d'être traitées dans un temps imparti
+afin de réagir aux stimuli à travers les actionneurs. FADEC\cite{} est
+un exemple type de ce genre de système. Le FADEC, acronyme anglais de
+\emph{Full Authority Digital Engine Control}, est un système qui
+s'interface entre le cockpit et le moteur d'aéronef. Il permet
+d'assurer le fonctionnement d'une turbo-machine (turbo-réacteur,
+turbo-propulseur, ou turbo-moteur), voire sur certains aéronefs. Le
+système FADEC est un système de régulation numérique centré sur un
+calculateur. Les capteurs principaux et les actionneurs sont pour leur
+partie électrique dupliqués (pour des raisons de sécurité). Seuls les
+organes hydrauliques (pompes, servovannes, générateurs de pression)
+sont uniques (non redondants).  Il assure les fonctions de
+(i)régulation de débit (alimentation en carburant, contrôle des
+accélérations/décélérations), (ii) démarrage automatique transmission
+des paramètres moteurs aux instruments du cockpit, (iii) gestion de la
+poussée et protection des limites opérationnelles et finalement (vi)
+gestion de la poussée inverse. Ainsi, ces systèmes sont classés dans
+la catégorie des systèmes temps réel.
+
+Parmi les fortes contraintes qui accompagnent les besoins temps-réel
+de ces applications, il y a les contraintes sur la consommation
+d'énergie. Les systèmes placés dans des endroits inaccessible et aussi
+les systèmes mobiles (robots, smartphone, tablette, $\cdots$) sont
+souvent alimentés par des batteries. Ceci oblige les concepteurs de
+prendre en compte ce types de contraintes (temps réel \& énergie) lors
+de la phase de conception afin d'augmenter la durée de vie de la
+batterie le plus longtemps possible et respecter les contraintes
+temps-réel.
+
+Les processeurs modernes sont multicoeurs et permettent de réduire la
+consommation d'énergie, \emph{statique} et \emph{dynamic},
+principalement via deux techniques: La \textsc{DPM}\footnote{Dynamic
+  Power Management} et la \textsc{DVFS}\footnote{Dynamic Voltage and
+  Frequency Scaling}. La première, celle que nous utiliserons dans ce
+travail, consiste à changer l'\emph{état} du matériel en éteignant des
+parties du processeurs telles que les différentes horloges matérielles
+(fournissant ainsi différent niveau \emph{d'endormissement} de
+processeur). Cette technique permet de réduire la consommation
+d'énergie statique. La deuxième technique, DVFS, consiste à changer la
+fréquence opérationnelle des unités de calculs afin de réduire la
+consommation d'énergie dynamique. Les architectes de processeurs
+prédisent qu'en 2020 la consommation de l'énergie statique sera plus
+importante que la consommation de l'énergie dynamique, plus
+particulièrement les processeurs embarqués. La réduction de la
+consommation d'énergie est au mépris des performances générales du
+systèmes. Ceci peut êtres tolérable pour les applications non
+critiques. Ce pendant, quand il s'agit de systèmes temps-réel, une
+certaine minimum puissance de calcul est requise pour respecter les
+contraintes temporelle du système.
+
+
+Dans ce travail, il s'agit de trouver un compromis entre le minimum
+requis de performance, pour \^etre ``s\^ure'' de point de vue
+temporelle, et la consommation d'énergie. Nous nous intéressons plus
+particulièrement à un domaine de recherche connue sous le nom ``Sleep
+scheduling'' dans la communauté des systèmes temps réel.
+
+
+\section*{Organisation du mémoire}
+
+Écris ici comment ton mémoire est organisé. 

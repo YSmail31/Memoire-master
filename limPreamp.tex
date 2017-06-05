@@ -1,0 +1,18 @@
+\begin{center}
+\begin{algorithm}[H]
+\KwData{TaskSet de tâches sporadic $\taskset{}$}
+\KwResult{$Q(t)$}
+\Begin{
+ Posons $\{t_{1},t_{2},...,t_{n}\}$ ensemble ordonné de $\{\deadline{i}+l\periode{i},\forall l \in N, 1 \leq i \leq n \}$ où $(t_{k} < t_{k+1},\forall k)$
+ $Q(t_{1}) \leftarrow t_{1} - \sum_{\tache{i} \in \taskset{}} DBF(\tache{i},t_{1})$\;
+ \For{$k \leftarrow 2,3...$}{
+	$Q(t_{k}) \leftarrow Min(Q(t_{k-1}),t_{k} - \sum_{\tache{i} \in \taskset{}} DBF(\tache{i},t_{k}))$\;
+	\If{$Q(t_{k}) < 0$}{
+	\textbf{return} faux\;
+	}
+	}
+	\textbf{return} vrai\;
+ }
+ \caption{Insertion Taches Endormissement Dans Un Mono-processeur}
+\end{algorithm}
+\end{center}

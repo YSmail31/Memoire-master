@@ -1,0 +1,14 @@
+\begin{center}
+\begin{algorithm}[H]
+\KwData{Ensemble de processeur $\proc{}$, Temps Minimum d'execution $\wcet{SleepMin}$}
+\KwResult{Ensemble de Tache d'endormissement $\taskset{Sleep}$}
+\Begin{
+	\For{$ \proc{i} \in \proc{}$}
+	{
+		$\tache{sleep}^i$ = tache\_endormissement\_monoprocesseur($\wcet{SleepMin}$) \; 
+		$\taskset{Sleep}^i =\taskset{Sleep}^i \cup \tache{sleep}^i$
+		}
+	}
+ \caption{Insertion Globale de Taches Endormissement Dans Une architecture Multiprocesseur}
+\end{algorithm}
+\end{center}

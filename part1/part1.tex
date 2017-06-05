@@ -1,0 +1,57 @@
+\part{Partie Theorique}
+\chapter{Introduction Au systeme temps réel}
+\section{Introduction}
+\section{Taxonomie sur les systèmes temps réel}
+\subsection*{Différents niveaux de criticité}
+\paragraph
+{Les systèmes temps réel dits critiques (ou dur) correspondent ont des systèmes pour lesquelles il est intolérable qu’une échéance soit manquée au risque de causer des conséquences graves, telles que des blessures ou des pertes humaines. Les centrales nucléaires ou le guidage de missiles représentent de tels systèmes à haute criticité. Dans le domaine de l’informatique embarqué, l’automobile et l’aéronautique regorgent de systèmes critiques à l’image des équipements déclencheurs d’airbags ou des logiciels de contrôle de vol de satellite. Il est crucial que les résultats soient disponibles au moment voulu et un résultat obtenu trop tard est inutilisable, à l’instar d’un système anti-missile qui recevrait la position d’un objet volant avec du retard.}
+
+\paragraph
+{Les systèmes temps réels mou sont des systèmes où on tolère les retards et ne requièrent pas un déterminisme temporel aussi fort que les systèmes temps réels dur.
+Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d’images dans un intervalle de temps régulier. Le fait de manquer une ou plusieurs échéances ne provoque pas l’arrêt du système multimédia. La qualité de la vidéo est dégradée mais le service peut continuer de fonctionner sans risque. Donc les systèmes temps réels mou  offre le  meilleur service possible (notion de best eﬀort) et les retards dans l’obtention des résultats ne sont pas dramatiques.}
+
+\paragraph
+{A la frontière entre les systèmes temps réel dur et mou, les systèmes temps réel ferme tolèrent une certaine proportion d’échéances manquées. Ils ne considèrent que les résultats obtenus à temps et sont liés à la notion de qualité de service (QoS).}
+
+\section{Ordonnancement monoprocesseur}
+
+\paragraph
+{Un algorithme d’ordonnancement est chargé de répartir les tâches sur un ou plusieurs processeurs : il décide quelle tâche sera exécutée sur tel processeur et pour combien de temps. }
+
+\subsection*{Definition}
+\paragraph
+{Nous définissons dans un premier temps les termes habituels concernant les systèmes temps réel.}
+
+\paragraph{
+\textbf{Hors-ligne en-ligne}. Un algorithme d’ordonnancement hors-ligne prend la totalité de ses décisions d’ordonnancement avant l’exécution du système. Au contraire, un ordonnancement en-ligne prend les décisions d’ordonnancement lors de l’exécution }
+
+\paragraph{
+\textbf{Priorités}. Les algorithmes d’ordonnancement temps réel peuvent être classés suivant leur utilisation des priorités pour choisir quelle tâche doit être ordonnancée. }
+
+\paragraph{
+\textbf{Préemptif / non préemptif}. Un algorithme d’ordonnancement préemptif est un algorithme d’ordonnancement qui peut arrêter l’exécution d’une tâche, i.e. la préempter, à tout moment lors de l’exécution. Au contraire, un algorithme d’ordonnancement non préemptif ne permet aucune préemption, un travail en cours d’exécution ne peut être arrêté.}
+
+\paragraph{
+\textbf{Ordonnançabilité / Faisabilité}. Un système de tâches est dit ordonnançable si un ordonnancement existe permettant de satisfaire toutes les contraintes temps réel. Un système de tâches est dit faisable s’il existe un algorithme d’ordonnancement permettant d’ordonnancer ce système de tâches sans aucune violation d’échéances.}
+
+
+\paragraph{
+\textbf{Optimalité}. Un algorithme d’ordonnancement est dit optimal s’il peut ordonnancer tous les ensembles de tâches ordonnançables par d’autres algorithmes d’ordonnancement existants.}
+
+\subsection{Algorithme d’ordonnancement à priorité fixe}
+\subsubsection{Rate Monotonic}
+\paragraph
+{\textbf{Théorème 3 (\cite{LL73})}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.
+Conditions suffisantes d'ordonnançabilité Liu et Layland ont donné dans [LL73], la condition suffisante d'ordonnançabilité : }
+\paragraph
+{\textbf{Théorème 4 ([LL73])}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }
+
+\section{Ordonnancement Multiprocesseur}
+\section{Conclusion}
+\chapter{Etat de l'art}
+\section{Introduction}
+\section{Les modèles de consommation d'énerie DVFS et DPM}
+\section{Les états C-states du processeur}
+\section{L'endormissement de processeur (Online VS Offline)}
+\section{Le Modèle d'endormissement de Dsouza}
+\section{Conclusion}

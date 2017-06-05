@@ -1,0 +1,17 @@
+\begin{center}
+\begin{algorithm}[H]
+\KwData{TaskSet $\taskset{}$, Temps Minimum d'execution $\wcet{SleepMin}$, Temps d'execution Maximum $\wcet{SleepMax}$, Pas de decrementation $\Delta \wcet{}$}
+\KwResult{Tache $\tache{Sleep}$}
+\Begin{
+ $\wcet{Sleep}  \longleftarrow \wcet{SleepMax}$ \;
+ $\deadline{Sleep}	\longleftarrow \periode{H}$ \;
+ $\periode{sleep} \longleftarrow \periode{H}$ \;
+ \While{$\Gamma \cup tache(\wcet{Sleep},\deadline{Sleep},\periode{H})$ est non  ordonnançable et $\wcet{Sleep} \geq \wcet{SleepMin}$}
+ {
+ 	$\wcet{Sleep} \longleftarrow \wcet{Sleep} - \Delta \wcet{}$ \;
+ }
+ $\tache{Sleep} \longleftarrow CreerTache(\wcet{Sleep},\deadline{Sleep},\periode{sleep})$
+ }
+ \caption{Insertion Taches Endormissement Dans Un Mono-processeur}
+\end{algorithm}
+\end{center}
